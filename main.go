@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
+	"github.com/hannder92/godesde0/arreglos_slices"
 	"github.com/hannder92/godesde0/ejercicios"
-	"github.com/hannder92/godesde0/files"
+	"github.com/hannder92/godesde0/funciones"
 	"github.com/hannder92/godesde0/iteraciones"
+	"github.com/hannder92/godesde0/mapas"
 	"github.com/hannder92/godesde0/variables"
 	"runtime"
 )
@@ -54,5 +56,25 @@ func main() {
 	//files.GrabaTabla()
 	//files.SumaTabla()
 	//Lectura de Archivo
-	files.LeoArchivo()
+	//files.LeoArchivo()
+
+	//Funciones anonimas
+	funciones.Calculos()
+
+	//Closure
+	funciones.LlamarClosure()
+
+	//Recursion
+	funciones.Exponencia(2)
+
+	//Arreglos
+	arreglos_slices.MuestroArreglos()
+
+	//Slices
+	arreglos_slices.MuestroSlice()
+
+	arreglos_slices.Capacidad()
+
+	//Mapas
+	mapas.MostrarMapas()
 }
