@@ -3,10 +3,15 @@ package main
 import (
 	"fmt"
 	"github.com/hannder92/godesde0/arreglos_slices"
+	"github.com/hannder92/godesde0/defer_panic"
+	"github.com/hannder92/godesde0/ejer_interfaces"
 	"github.com/hannder92/godesde0/ejercicios"
 	"github.com/hannder92/godesde0/funciones"
 	"github.com/hannder92/godesde0/iteraciones"
 	"github.com/hannder92/godesde0/mapas"
+	"github.com/hannder92/godesde0/middleware"
+	"github.com/hannder92/godesde0/modelos"
+	"github.com/hannder92/godesde0/users"
 	"github.com/hannder92/godesde0/variables"
 	"runtime"
 )
@@ -77,4 +82,35 @@ func main() {
 
 	//Mapas
 	mapas.MostrarMapas()
+
+	//Estructura
+	users.AltaUsuario()
+
+	//Interfaces
+	Pedro := new(modelos.Hombre)
+	ejer_interfaces.HumanosRespirando(Pedro)
+
+	Maria := new(modelos.Mujer)
+	ejer_interfaces.HumanosRespirando(Maria)
+
+	//Defer
+	defer_panic.VemosDefer()
+
+	//Panic
+	//defer_panic.EjemploPanic()
+
+	//Asincronia
+	/*canal1 := make(chan bool)
+	go goroutines.MiNombreLento("Pepito Perez", canal1)
+	//si hay mas de un canal, se pueden poner en el defer para que espere todas las funciones
+	defer func() {
+		<-canal1
+	}()
+	//<-canal1*/
+
+	//Servidor Web
+	//webserver.MiWebServer()
+
+	middleware.MiMiddleware()
+
 }
